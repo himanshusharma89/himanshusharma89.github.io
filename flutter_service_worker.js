@@ -1,7 +1,12 @@
 'use strict';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "e0b651e35c7885c3e1b4c9714692939f",
+  "assets/AssetManifest.json": "ff7391e70a2ed8faa7f4ee5a510a7205",
+"assets/assets/experience/google.png": "6c1c184ba6c84516ba5914fae176e2a1",
+"assets/assets/experience/gssoc.png": "b8cb3f231b92c24e4a0da74addf4e704",
+"assets/assets/experience/ieee.png": "c549cba2153dda2eb693aece0772aab5",
+"assets/assets/experience/jwoc.jfif": "f8f6f648d339b673be0facbaa5659d09",
+"assets/assets/experience/QSwhite.png": "10726360a3c3ec3a6716886d0a5c423f",
 "assets/assets/flutter.png": "96e752610906ba2a93c65f8abe1645f1",
 "assets/assets/fonts/Poppins-Regular.ttf": "41e8dead03fb979ecc23b8dfb0fef627",
 "assets/assets/fonts/Poppins-SemiBold.ttf": "342ba3d8ac29ac8c38d7cef8efbf2dc9",
@@ -34,7 +39,7 @@ const RESOURCES = {
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "8cca35d025fddbf03ebe0b5ca5813eed",
-"main.dart.js": "1f1310d0000d3ddf6e01d9ccd8325c6b",
+"main.dart.js": "b61ca496f8af3a197121673d190a1d9e",
 "manifest.json": "1be9db6342f3c7d5d6ad928f61c39cf0"
 };
 

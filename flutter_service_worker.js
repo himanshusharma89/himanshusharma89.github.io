@@ -1,68 +1,193 @@
 'use strict';
+const MANIFEST = 'flutter-app-manifest';
+const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "ff7391e70a2ed8faa7f4ee5a510a7205",
-"assets/assets/experience/google.png": "6c1c184ba6c84516ba5914fae176e2a1",
-"assets/assets/experience/gssoc.png": "b8cb3f231b92c24e4a0da74addf4e704",
-"assets/assets/experience/ieee.png": "c549cba2153dda2eb693aece0772aab5",
-"assets/assets/experience/jwoc.jfif": "f8f6f648d339b673be0facbaa5659d09",
-"assets/assets/experience/QSwhite.png": "10726360a3c3ec3a6716886d0a5c423f",
+  "assets/AssetManifest.json": "de2c9aa68549f06fdf304ce8a8b72eea",
 "assets/assets/flutter.png": "96e752610906ba2a93c65f8abe1645f1",
-"assets/assets/fonts/Poppins-Regular.ttf": "41e8dead03fb979ecc23b8dfb0fef627",
-"assets/assets/fonts/Poppins-SemiBold.ttf": "342ba3d8ac29ac8c38d7cef8efbf2dc9",
-"assets/assets/fonts/SfDistantGalaxyAlternate-OE4d.ttf": "1b345d1f96e129e663afd200ec1babeb",
-"assets/assets/IMG_0602%2520-%2520Copy.JPG": "0547ba28646f4178d6d0c7bae88d1417",
-"assets/assets/lp_image.png": "5aad4d4216174954f5228d7d268546e8",
-"assets/assets/profile.png": "cb94d030317c17a689bce84eef942cdc",
-"assets/assets/social/gfg.png": "dec6818e4b4f765953439799c292db38",
-"assets/assets/social/gfg1.png": "b432edbd3895d483718609fddeafb556",
-"assets/assets/social/gfg2.png": "b8ca9f841a293392d7b2f9452f06c66f",
-"assets/assets/social/github.png": "6ab40f6ad84d5fc3ddf80e437e2bb894",
-"assets/assets/social/instagram.png": "27fa639be5347982c656131a33bc5f1d",
-"assets/assets/social/linkedIn.png": "912f3b338873586411d29ac982465431",
-"assets/assets/social/logo_blank.png": "d4bc03134dfeed88b5845c137590555a",
-"assets/assets/social/medium.png": "65307fbbc0d3435f76472f78d72fb97a",
-"assets/assets/social/stack-overflow.png": "b2fe48cfe515f6588f9025c387f41530",
-"assets/assets/social/twitter.png": "f09dff1cf7cbf0c7e32140ff7dfbe870",
-"assets/assets/tech/c++.png": "baaa832726b13cb7645fcb473e4fc31f",
-"assets/assets/tech/c.png": "9f4c53d7bb0c658d69a5578331f8c6aa",
-"assets/assets/tech/css.png": "0d10c6221c282e24508f94b186d8f6cf",
-"assets/assets/tech/dart.png": "7a0cddaf66ee751a2b6e3fac9357020b",
-"assets/assets/tech/html.png": "7a4f0bb67699d4c1173ffcebabcebc17",
-"assets/assets/tech/java.png": "0414fcd53fdb6903fb57134fdd8a9af2",
-"assets/FontManifest.json": "d640438b9dfc588261f1eb00f6808469",
-"assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/LICENSE": "0f38cac03e7428238b79788b66c66529",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"flutter_dev.png": "1a2713cc6b685e0cafc692a490caa6d4",
+"assets/assets/flutter1.png": "eca67d1acbef7890d6517e84f28f40c8",
+"assets/assets/github_icon.png": "472739dfb5857b1f659f4c4c6b4568d0",
+"assets/assets/heart.png": "8da07fbe034f18b2977f18be4fc64bdd",
+"assets/assets/heart_blue.png": "85ab16edaf50f647e657720b2c3df2b6",
+"assets/assets/loader.gif": "ee45880dd9da258d02a758430a78c485",
+"assets/assets/MLSA.png": "7cc09d182a245e887c0840820fb8fd3a",
+"assets/assets/placeholder.gif": "39e6b6265b7a2df9c618673e4480b1de",
+"assets/assets/self.JPG": "0547ba28646f4178d6d0c7bae88d1417",
+"assets/assets/wakatime_icon.png": "a7aa48a3891e7332db43271f3a15198e",
+"assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
+"assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
+"assets/NOTICES": "a8142da8fc8d2322643c410e010681ad",
+"icons/heart_blue.png": "85ab16edaf50f647e657720b2c3df2b6",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "8cca35d025fddbf03ebe0b5ca5813eed",
-"main.dart.js": "01e30930c20ac440d32574ab236e1b11",
-"manifest.json": "1be9db6342f3c7d5d6ad928f61c39cf0"
+"icons/loader.gif": "ee45880dd9da258d02a758430a78c485",
+"index.html": "e913e7d5a6ff2198a71ae2eee0e268e5",
+"/": "e913e7d5a6ff2198a71ae2eee0e268e5",
+"main.dart.js": "c84fbaa9ff32edc324597705f61b6cf5",
+"manifest.json": "1be9db6342f3c7d5d6ad928f61c39cf0",
+"styles.css": "e2247ce8fc6909224c183a1eea69140a"
 };
 
-self.addEventListener('activate', function (event) {
-  event.waitUntil(
-    caches.keys().then(function (cacheName) {
-      return caches.delete(cacheName);
-    }).then(function (_) {
-      return caches.open(CACHE_NAME);
-    }).then(function (cache) {
-      return cache.addAll(Object.keys(RESOURCES));
+// The application shell files that are downloaded before a service worker can
+// start.
+const CORE = [
+  "/",
+"main.dart.js",
+"index.html",
+"assets/NOTICES",
+"assets/AssetManifest.json",
+"assets/FontManifest.json"];
+// During install, the TEMP cache is populated with the application shell files.
+self.addEventListener("install", (event) => {
+  return event.waitUntil(
+    caches.open(TEMP).then((cache) => {
+      return cache.addAll(
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });
 
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function (response) {
-        if (response) {
-          return response;
+// During activate, the cache is populated with the temp files downloaded in
+// install. If this service worker is upgrading from one with a saved
+// MANIFEST, then use this to retain unchanged resource files.
+self.addEventListener("activate", function(event) {
+  return event.waitUntil(async function() {
+    try {
+      var contentCache = await caches.open(CACHE_NAME);
+      var tempCache = await caches.open(TEMP);
+      var manifestCache = await caches.open(MANIFEST);
+      var manifest = await manifestCache.match('manifest');
+      // When there is no prior manifest, clear the entire cache.
+      if (!manifest) {
+        await caches.delete(CACHE_NAME);
+        contentCache = await caches.open(CACHE_NAME);
+        for (var request of await tempCache.keys()) {
+          var response = await tempCache.match(request);
+          await contentCache.put(request, response);
         }
-        return fetch(event.request);
+        await caches.delete(TEMP);
+        // Save the manifest to make future upgrades efficient.
+        await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+        return;
+      }
+      var oldManifest = await manifest.json();
+      var origin = self.location.origin;
+      for (var request of await contentCache.keys()) {
+        var key = request.url.substring(origin.length + 1);
+        if (key == "") {
+          key = "/";
+        }
+        // If a resource from the old manifest is not in the new cache, or if
+        // the MD5 sum has changed, delete it. Otherwise the resource is left
+        // in the cache and can be reused by the new service worker.
+        if (!RESOURCES[key] || RESOURCES[key] != oldManifest[key]) {
+          await contentCache.delete(request);
+        }
+      }
+      // Populate the cache with the app shell TEMP files, potentially overwriting
+      // cache files preserved above.
+      for (var request of await tempCache.keys()) {
+        var response = await tempCache.match(request);
+        await contentCache.put(request, response);
+      }
+      await caches.delete(TEMP);
+      // Save the manifest to make future upgrades efficient.
+      await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+      return;
+    } catch (err) {
+      // On an unhandled exception the state of the cache cannot be guaranteed.
+      console.error('Failed to upgrade service worker: ' + err);
+      await caches.delete(CACHE_NAME);
+      await caches.delete(TEMP);
+      await caches.delete(MANIFEST);
+    }
+  }());
+});
+
+// The fetch handler redirects requests for RESOURCE files to the service
+// worker cache.
+self.addEventListener("fetch", (event) => {
+  var origin = self.location.origin;
+  var key = event.request.url.substring(origin.length + 1);
+  // Redirect URLs to the index.html
+  if (key.indexOf('?v=') != -1) {
+    key = key.split('?v=')[0];
+  }
+  if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '') {
+    key = '/';
+  }
+  // If the URL is not the RESOURCE list, skip the cache.
+  if (!RESOURCES[key]) {
+    return event.respondWith(fetch(event.request));
+  }
+  // If the URL is the index.html, perform an online-first request.
+  if (key == '/') {
+    return onlineFirst(event);
+  }
+  event.respondWith(caches.open(CACHE_NAME)
+    .then((cache) =>  {
+      return cache.match(event.request).then((response) => {
+        // Either respond with the cached resource, or perform a fetch and
+        // lazily populate the cache.
+        return response || fetch(event.request).then((response) => {
+          cache.put(event.request, response.clone());
+          return response;
+        });
       })
+    })
   );
 });
+
+self.addEventListener('message', (event) => {
+  // SkipWaiting can be used to immediately activate a waiting service worker.
+  // This will also require a page refresh triggered by the main worker.
+  if (event.data === 'skipWaiting') {
+    return self.skipWaiting();
+  }
+  if (event.message === 'downloadOffline') {
+    downloadOffline();
+  }
+});
+
+// Download offline will check the RESOURCES for all files not in the cache
+// and populate them.
+async function downloadOffline() {
+  var resources = [];
+  var contentCache = await caches.open(CACHE_NAME);
+  var currentContent = {};
+  for (var request of await contentCache.keys()) {
+    var key = request.url.substring(origin.length + 1);
+    if (key == "") {
+      key = "/";
+    }
+    currentContent[key] = true;
+  }
+  for (var resourceKey in Object.keys(RESOURCES)) {
+    if (!currentContent[resourceKey]) {
+      resources.push(resourceKey);
+    }
+  }
+  return contentCache.addAll(resources);
+}
+
+// Attempt to download the resource online before falling back to
+// the offline cache.
+function onlineFirst(event) {
+  return event.respondWith(
+    fetch(event.request).then((response) => {
+      return caches.open(CACHE_NAME).then((cache) => {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    }).catch((error) => {
+      return caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((response) => {
+          if (response != null) {
+            return response;
+          }
+          throw error;
+        });
+      });
+    })
+  );
+}

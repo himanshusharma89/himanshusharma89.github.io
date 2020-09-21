@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "de2c9aa68549f06fdf304ce8a8b72eea",
+  "assets/AssetManifest.json": "5bd24780a5ab0315c09f41e00b68b6fb",
 "assets/assets/flutter.png": "96e752610906ba2a93c65f8abe1645f1",
 "assets/assets/flutter1.png": "eca67d1acbef7890d6517e84f28f40c8",
 "assets/assets/github_icon.png": "472739dfb5857b1f659f4c4c6b4568d0",
@@ -12,7 +12,7 @@ const RESOURCES = {
 "assets/assets/loader.gif": "ee45880dd9da258d02a758430a78c485",
 "assets/assets/MLSA.png": "7cc09d182a245e887c0840820fb8fd3a",
 "assets/assets/placeholder.gif": "39e6b6265b7a2df9c618673e4480b1de",
-"assets/assets/self.JPG": "0547ba28646f4178d6d0c7bae88d1417",
+"assets/assets/self.jpg": "0547ba28646f4178d6d0c7bae88d1417",
 "assets/assets/wakatime_icon.png": "a7aa48a3891e7332db43271f3a15198e",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
@@ -21,8 +21,8 @@ const RESOURCES = {
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/loader.gif": "ee45880dd9da258d02a758430a78c485",
-"index.html": "e913e7d5a6ff2198a71ae2eee0e268e5",
-"/": "e913e7d5a6ff2198a71ae2eee0e268e5",
+"index.html": "976064ead0276da6098ec0f9be7d6c54",
+"/": "976064ead0276da6098ec0f9be7d6c54",
 "main.dart.js": "c84fbaa9ff32edc324597705f61b6cf5",
 "manifest.json": "1be9db6342f3c7d5d6ad928f61c39cf0",
 "styles.css": "e2247ce8fc6909224c183a1eea69140a"

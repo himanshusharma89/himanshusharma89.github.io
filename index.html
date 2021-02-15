@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -12,20 +13,23 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="icons/heart_blue.png"/>
+  <link rel="shortcut icon" type="image/png" href="icons/heart_blue.png" />
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Himanshu Shrama | Flutter Dev</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body id="app-container" class="body">
-  <img src="icons/loader.gif" class="center"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_yV8p42.json" background="transparent" speed="0.75"
+    autoplay loop></lottie-player>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3096977494');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=837584096');
       });
     }
   </script>
@@ -56,4 +60,5 @@
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
+
 </html>

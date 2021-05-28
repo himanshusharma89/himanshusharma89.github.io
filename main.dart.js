@@ -9267,7 +9267,7 @@ ahZ:function(a,b,c){var s=0,r=P.Z(t.y),q,p
 var $async$ahZ=P.V(function(d,e){if(d===1)return P.W(e,r)
 while(true)switch(s){case 0:p=t.N
 s=3
-return P.a0(G.aHx(P.m5("http://api.himanshusharma.tech/send/",0,null),P.ap(["name",c,"message",b,"email",a],p,p)),$async$ahZ)
+return P.a0(G.aHx(P.m5("https://himanshusharma89-api.herokuapp.com/send/",0,null),P.ap(["name",c,"message",b,"email",a],p,p)),$async$ahZ)
 case 3:if(e.b===200){q=!0
 s=1
 break}q=!1

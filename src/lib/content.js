@@ -5,17 +5,18 @@ export const hero = {
   name: "Himanshu Sharma",
   tagline: "Backend Engineer & DevRel",
   summary: "Building cloud-native tools and platforms. Passionate about simplifying complex systems and empowering developers.",
+  profileImage: "https://raw.githubusercontent.com/himanshusharma89/himanshusharma89.github.io/new/static/profile.png",
   buttons: [
     { label: 'Email', icon: 'faEnvelope', url: 'mailto:contact@himanshusharma.tech' },
     { label: 'LinkedIn', icon: 'faLinkedin', url: 'https://linkedin.com/in/himanshusharma89' },
-    { label: 'Resume', icon: 'faFileAlt', url: '/resume.pdf' },
+    { label: 'Resume', icon: 'faFileAlt', url: 'https://himanshusharma.tech/resume' },
     { label: 'GitHub', icon: 'faGithub', url: 'https://github.com/himanshusharma89' },
-    { label: 'Stack Overflow', icon: 'faStackOverflow', url: 'https://stackoverflow.com/users/yourid' },
+    { label: 'Stack Overflow', icon: 'faStackOverflow', url: 'https://stackoverflow.com/users/11545939/himanshu-sharma' },
     { label: 'Medium', icon: 'faMedium', url: 'https://medium.com/@himanshusharma89' },
     { label: 'Codepen', icon: 'faCodepen', url: 'https://codepen.io/himanshusharma89' },
-    { label: 'Twitter', icon: 'faTwitter', url: 'https://twitter.com/himanshusharma89' },
-    { label: 'Instagram', icon: 'faInstagram', url: 'https://instagram.com/himanshusharma89' },
-    { label: 'Blog', icon: 'faBlog', url: 'https://himanshusharma.tech/blog' },
+    { label: 'X', icon: 'faTwitter', url: 'https://x.com/_SharmaHimanshu' },
+    { label: 'Instagram', icon: 'faInstagram', url: 'https://instagram.com/rage.remix' },
+    { label: 'Blog', icon: 'faBlog', url: 'https://blog.himanshusharma.tech' },
   ]
 };
 
@@ -24,11 +25,11 @@ export const about = `I'm a Developer Relations Engineer at Improving with a bac
 export const featuredWork = [
   {
     title: "How to Build Your Own MCP Server",
-    description: "A step-by-step guide to building Model Context Protocol (MCP) servers for AI-driven workflows."
+    description: `A step-by-step guide to building Model Context Protocol (MCP) servers for AI-driven workflows. [Read the blog](https://www.infracloud.io/blogs/build-your-own-mcp-server/)`
   },
   {
     title: "K8s Diagnostics MCP Server",
-    description: "Top 6 in AI Agents Hackathon (2024): Built a Kubernetes diagnostics agent using the MCP protocol, recognized among the best AI agents."
+    description: `Top 6 in AI Agents Hackathon (2025, by Airtribe & Lyzr): Built a Kubernetes diagnostics agent using the MCP protocol, recognized among the best AI agents. [GitHub Repo](https://github.com/himanshusharma89/k8s-diagnostics-mcp-server) | [Hackathon Info](https://lp.airtribe.live/ai-agents-hackathon)`
   }
 ];
 

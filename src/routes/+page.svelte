@@ -7,6 +7,7 @@
     faLinkedin, faGithub, faStackOverflow, faMedium, faCodepen, faTwitter, faInstagram
   } from '@fortawesome/free-brands-svg-icons';
   import { hero, about, featuredWork, techStack, connect } from '$lib/content.js';
+  import { marked } from 'marked';
 
   // Map icon string names to actual icon imports for dynamic rendering
   const iconMap = {
@@ -49,50 +50,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sen:wght@400&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<style>
-  :global(body) {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #fff;
-    line-height: 1.5;
-    color: #333;
-  }
-
-  .container {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 1rem;
-  }
-
-
-  .section {
-    margin-bottom: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-  .highlight {
-    font-weight: bold;
-    color: #000;
-  }
-
-  footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
-    font-size: 0.9rem;
-    text-align: center;
-    color: #aaa;
-  }
-</style>
-
 <div class="min-h-screen flex items-center justify-center bg-[#fafafa]">
   <div class="flex flex-col-reverse md:flex-row items-stretch gap-8 w-full max-w-5xl px-4 py-12">
     <!-- Left: Text & Buttons, responsive height -->
@@ -121,7 +78,7 @@
     <!-- Right: Profile Image, responsive and aligned -->
     <div class="flex-1 flex items-center justify-center md:items-stretch">
       <div class="w-40 h-40 md:w-full md:max-w-md md:aspect-square md:h-full bg-gray-500 bg-opacity-60 rounded border-2 border-dashed border-gray-300 flex items-center justify-center mx-auto shadow-md overflow-hidden">
-        <img src="/profile.png" alt="Himanshu Sharma" class="object-cover w-full h-full" />
+        <img src={hero.profileImage} alt="Himanshu Sharma" class="object-cover w-full h-full" />
       </div>
     </div>
   </div>
@@ -139,7 +96,7 @@
     <ul class="space-y-4">
       {#each featuredWork as work}
         <li class="text-base md:text-lg leading-relaxed">
-          <span class="highlight">{work.title}</span> — {work.description}
+          <span class="highlight">{work.title}</span> — <span class="featured-links">{@html marked.parse(work.description)}</span>
         </li>
       {/each}
     </ul>
@@ -162,6 +119,54 @@
   </div>
 
   <footer>
-    <p class="text-sm md:text-base">© 2025 - Himanshu Sharma</p>
+    <p class="text-sm md:text-base">© 2025 - himanshusharma.tech</p>
   </footer>
 </div>
+
+<style>
+  :global(body) {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #000;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #aaa;
+  }
+
+  :global(.featured-links a) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>

@@ -11,7 +11,7 @@ export const hero = {
 	buttons: [
 		{ label: 'Email', icon: 'faEnvelope', url: 'mailto:contact@himanshusharma.tech' },
 		{ label: 'LinkedIn', icon: 'faLinkedin', url: 'https://linkedin.com/in/himanshusharma89' },
-		{ label: 'Resume', icon: 'faFileAlt', url: 'https://himanshusharma.tech/resume' },
+		{ label: 'Resume', icon: 'faFileAlt', url: 'https://resume.himanshusharma.tech' },
 		{ label: 'GitHub', icon: 'faGithub', url: 'https://github.com/himanshusharma89' },
 		{
 			label: 'Stack Overflow',

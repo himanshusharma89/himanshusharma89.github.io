@@ -3,7 +3,7 @@
 
 export const hero = {
 	name: 'Himanshu Sharma',
-	tagline: 'Backend Engineer & DevRel',
+	tagline: 'Senior Software Engineer',
 	summary:
 		'Building cloud-native tools and platforms. Passionate about simplifying complex systems and empowering developers.',
 	profileImage:
@@ -26,9 +26,13 @@ export const hero = {
 	]
 };
 
-export const about = `I'm a Developer Relations Engineer at Improving with a backend engineering background. I focus on Kubernetes, developer platforms, and AI automation. I enjoy simplifying complex systems, writing about what I learn, and building tools that help developers move faster. Always curious, often experimenting, sometimes shipping. Outside work, I explore new places, play story-driven games, and keep a watchful eye on what's next in tech.`;
+export const about = `I'm a Senior Software Engineer at Freshworks with a backend engineering background. I focus on Kubernetes, developer platforms, and AI automation. I enjoy simplifying complex systems, writing about what I learn, and building tools that help developers move faster. Always curious, often experimenting, sometimes shipping. Outside work, I explore new places, play story-driven games, and keep a watchful eye on what's next in tech.`;
 
 export const featuredWork = [
+	{
+		title: 'darkdown-to-markdown NPM Package',
+		description: `A node package which converts darkdown to GitBook readable markdown format with comprehensive migration tools. [NPM Package](https://www.infracloud.io/blogs/build-your-own-mcp-server/)`
+	},
 	{
 		title: 'How to Build Your Own MCP Server',
 		description: `A step-by-step guide to building Model Context Protocol (MCP) servers for AI-driven workflows. [Read the blog](https://www.infracloud.io/blogs/build-your-own-mcp-server/)`

@@ -10,7 +10,7 @@
 		faTwitter,
 		faInstagram
 	} from '@fortawesome/free-brands-svg-icons';
-	import { hero, about, featuredWork, techStack, connect } from '$lib/content.js';
+	import { hero, about, featuredWork, featuredArticles, techStack, connect, writingStats } from '$lib/content.js';
 	import { marked } from 'marked';
 
 	// Map icon string names to actual icon imports for dynamic rendering
@@ -123,13 +123,54 @@
 	</div>
 
 	<div class="section">
+		<h2 class="mb-2 text-xl font-bold md:text-3xl">Featured Writing</h2>
+		<p class="text-base leading-relaxed md:text-lg">
+			I write practical deep dives on AI tooling, Kubernetes, Flutter, and developer platforms for
+			InfraCloud, LogRocket, Medium, and independent publications.
+		</p>
+
+		<div class="writing-stats my-5 grid gap-3 sm:grid-cols-3">
+			{#each writingStats as stat (stat.label)}
+				<div class="rounded border border-gray-100 bg-[#fafafa] p-4">
+					<div class="text-2xl font-bold text-orange-600">{stat.value}</div>
+					<div class="mt-1 text-sm text-gray-500">{stat.label}</div>
+				</div>
+			{/each}
+		</div>
+
+		<ul class="space-y-3">
+			{#each featuredArticles as article (article.title)}
+				<li class="text-base leading-relaxed md:text-lg">
+					<a
+						class="highlight underline decoration-gray-300 underline-offset-4 transition hover:text-orange-600 hover:decoration-orange-400"
+						href={article.url}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{article.title}
+					</a>
+					<span class="text-gray-500"> — {article.source} · {article.category}</span>
+				</li>
+			{/each}
+		</ul>
+
+		<a
+			class="mt-5 inline-flex items-center rounded border border-gray-100 bg-white px-4 py-2 text-base font-bold text-gray-700 shadow transition hover:bg-orange-50 hover:text-orange-600 hover:shadow-md"
+			href="/blog"
+		>
+			View all writing
+		</a>
+	</div>
+
+	<div class="section">
 		<h2 class="mb-2 text-xl font-bold md:text-3xl">Tech Stack & Skills</h2>
 		<ul class="text-base leading-relaxed md:text-lg">
-			<li><strong>Languages & Frameworks:</strong> {techStack.languages}</li>
-			<li><strong>Cloud & Infra:</strong> {techStack.cloud}</li>
-			<li><strong>Dev & DevOps Tools:</strong> {techStack.devops}</li>
+			<li><strong>Backend & Systems:</strong> {techStack.backend}</li>
+			<li><strong>Platform & Infrastructure:</strong> {techStack.platform}</li>
+			<li><strong>Developer Platforms & Automation:</strong> {techStack.devplatform}</li>
 			<li><strong>Data & Observability:</strong> {techStack.data}</li>
-			<li><strong>Developer Experience:</strong> {techStack.dx}</li>
+			<li><strong>Developer Experience & Community:</strong> {techStack.devrel}</li>
+			<li><strong>AI & Emerging Technologies:</strong> {techStack.ai}</li>
 		</ul>
 	</div>
 
